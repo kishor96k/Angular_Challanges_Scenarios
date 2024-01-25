@@ -1,1 +1,134 @@
-<p>two works!</p>
+<div class="container mt-4">
+    <h4 class="text-center " style="text-decoration: underline;">CRUD WITH LOCALSTORAGE</h4>
+    <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addModal">
+            Add Modal
+        </button>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mt-2 mb-2">
+                        <div class="col-12">
+                            <label for="selectAbove" class="mr-2">Select above</label>
+                            <div class="form-group d-flex align-items-center">
+                                <div class="form-check form-check-inline mr-2">
+                                    <input class="form-check-input" type="radio" name="complaintAgainst"
+                                        id="insuranceCompany" value="InsuranceCompany">
+                                    <label class="form-check-label" for="insuranceCompany">Insurance Company</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-2">
+                                    <input class="form-check-input" type="radio" name="complaintAgainst"
+                                        id="agentBreaking" value="AgentBreaking">
+                                    <label class="form-check-label" for="agentBreaking">Agent Breaking</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="complaintAgainst" id="other"
+                                        value="Other">
+                                    <label class="form-check-label" for="other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-gorup">
+                                <label for="">First Name</label>
+                                <input type="text" name="firstname" id="firstname" class="form-control"
+                                    placeholder="enter firstname">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-gorup">
+                                <label for="">last Name</label>
+                                <input type="text" name="lastname" id="lastname" class="form-control"
+                                    placeholder="enter lastname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Address</label>
+                                <textarea name="addressone" id="addressone" cols="10" rows="2" class="form-control" placeholder="enter address"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Street Address</label>
+                                <textarea name="addresstwo" id="addresstwo" cols="10" rows="2" class="form-control" placeholder="enter another"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">City</label>
+                                <input type="text" name="city" id="city" class="form-control" placeholder="enter city">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Region</label>
+                                <input type="text" name="region" id="region" class="form-control" placeholder="enter region">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Pincode</label>
+                                <input type="number" name="pincode" id="pincode" class="form-control" placeholder="enter pincode">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group mt-4">
+                                <select name="" id="" class="form-control">
+                                    <option value="asd">asd</option>
+                                    <option value="asd">asd</option>
+                                    <option value="asd">asd</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Phone</label>
+                                <input type="number" name="phone" id="phone" class="form-control" placeholder="enter phone">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="enter email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Complaint</label>
+                                <textarea name="" id="" cols="" rows="2" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
