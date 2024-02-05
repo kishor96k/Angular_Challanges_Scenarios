@@ -4,6 +4,7 @@ import { TwoComponent } from './two_practice/two/two.component';
 import { OneComponent } from './one_practice/one/one.component';
 import { ThreeComponent } from './three_practice/three/three.component';
 import { FourComponent } from './four_practice/four/four.component';
+import { FiveComponent } from './five_practice/five/five.component';
 
 
 const routes: Routes = [
@@ -28,8 +29,8 @@ const routes: Routes = [
     title: 'crud with local storage'
   },
   {
-    path: 'two',
-    component: TwoComponent,
+    path: 'five',
+    component: FiveComponent,
     title: 'crud with local storage'
   },
 ];
