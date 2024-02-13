@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: 'three',
     component: ThreeComponent,
-    title: 'crud with local storage'
+    title: 'template driven form'
   },
   {
     path: 'four',

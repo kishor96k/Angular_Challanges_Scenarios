@@ -22,12 +22,16 @@ export class ThreeComponent implements OnInit {
     degree1styrper: '',
     degree2ndyrper: '',
     degree3rdyrper: '',
-    degreepassyr:'',
-    othereducation:'',
-    othereducationper:'',
-    othereducationyr:'',
-    startdate:'',
-    enddate:'',
+    degreepassyr: '',
+    othereducation: '',
+    othereducationper: '',
+    othereducationyr: '',
+    startdate: '',
+    enddate: '',
   }
-  
+
+  fillName: any;
+  createFullName() {
+    this.fillName = this.templateForm.firstname + ' ' + this.templateForm.middlename + ' ' + this.templateForm.lastname;
+  }
 }

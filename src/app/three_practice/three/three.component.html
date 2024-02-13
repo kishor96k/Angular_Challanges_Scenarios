@@ -4,20 +4,22 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">First Name</label>
-                <input type="text"  name="firstname" id="firstname" placeholder="enter first name" class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.firstname" name="firstname" id="firstname"
+                    placeholder="enter first name" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Middle Name</label>
-                <input type="text" name="middlename" id="middlename" placeholder="enter middle name"
-                    class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.middlename" name="middlename" id="middlename"
+                    placeholder="enter middle name" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Last Name</label>
-                <input type="text" name="lastname" id="lastname" placeholder="enter last name" class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.lastname" name="lastname" id="lastname"
+                    placeholder="enter last name" class="form-control">
             </div>
         </div>
     </div>
@@ -25,7 +27,7 @@
         <div class="form-group">
             <div class="col">
                 <label for="">Full Name</label>
-                <input type="text" name="fullname" id="fullname" class="form-control">
+                <input type="text" disabled [value]="fillName" name="fullname" id="fullname" class="form-control">
             </div>
         </div>
     </div>
@@ -33,19 +35,19 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Select DOB</label>
-                <input type="date" name="dob" id="dob" class="form-control">
+                <input type="date" [(ngModel)]="templateForm.dob" name="dob" id="dob" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Age</label>
-                <input type="text" name="age" id="age" class="form-control">
+                <input type="text" [(ngModel)]="templateForm.age" name="age" id="age" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Licence No</label>
-                <input type="text" name="licence" id="licence" class="form-control">
+                <input type="text" [(ngModel)]="templateForm.licence" name="licence" id="licence" class="form-control">
             </div>
         </div>
     </div>
@@ -53,13 +55,108 @@
         <div class="col-md-5 mt-4">
             <div class="form-group">
                 <label for="">Education / Study</label>
-                <select name="education" id="education" class="form-control">
+                <select name="education" id="education" class="form-control" [(ngModel)]="templateForm.education">
                     <option value="">>Select Education</option>
-                    <option value="diploma">diploma</option>
+                    <option value="twelthper">12th</option>
                     <option value="degree">degree</option>
-                    <option value="masters">masters</option>
+                    <option value="masters">other</option>
                 </select>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="">Enter Highest Education</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.othereducation" name="othereducation"
+                    id="othereducation">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="">% of marks</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.othereducationper"
+                    name="othereducationper" id="othereducationper">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="">Passing Year</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.othereducationperyr"
+                    name="othereducationperyr" id="othereducationperyr">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="">12 %</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.twelthper" name="twelthper"
+                    id="twelthper">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="">12 Passing year</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.twelthpasssyr" name="twelthpasssyr"
+                    id="twelthpasssyr">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">1st yr</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.degree1styrper" name="degree1styrper"
+                    id="degree1styrper">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">2nd yr</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.degree2ndyrper" name="degree2ndyrper"
+                    id="degree2ndyrper">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">3rd yr</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.degree3rdyrper" name="degree3rdyrper"
+                    id="degree3rdyrper">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">Passing year</label>
+                <input type="text" class="form-control" [(ngModel)]="templateForm.degreepassyr" name="degreepassyr"
+                    id="degreepassyr">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="">Start Date</label>
+                <input type="date" [(ngModel)]="templateForm.startdate" name="startdate" id="startdate"
+                    class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="">End Date</label>
+                <input type="date" [(ngModel)]="templateForm.enddate" name="enddate" id="enddate" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="container overflow-hidden text-center">
+        <div class="row gx-5">
+          <div class="col">
+            <button class="btn btn-dark  btn-lg p-2 m-2">Reset</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-lg p-2 m-2">Apply</button>
+          </div>
+        </div>
+      </div>
+    
 </div>
