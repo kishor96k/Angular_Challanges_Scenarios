@@ -37,6 +37,11 @@
                     <td>{{item.phone}}</td>
                     <td>{{item.email}}</td>
                     <td>{{item.complaint}}</td>
+                    <td>
+                        <button type="button" class="btn btn-warning btn-sm" (click)="onEdit(item.id)">
+                            Edit
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -157,6 +162,121 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark">Reset</button>
                 <button type="button" class="btn btn-success" (click)="onRegister()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Complaint Booking App</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mt-2 mb-2">
+                        <div class="col-12">
+                            <label for="selectAbove" class="mr-2">Select above</label>
+                            <div class="form-group d-flex align-items-center">
+                                <div class="form-check form-check-inline mr-2">
+                                    <input class="form-check-input" [(ngModel)]="complaintObj.complaintAgainst"
+                                        type="radio" name="complaintAgainst" id="insuranceCompany"
+                                        value="InsuranceCompany">
+                                    <label class="form-check-label" for="insuranceCompany">Insurance Company</label>
+                                </div>
+                                <div class="form-check form-check-inline mr-2">
+                                    <input class="form-check-input" [(ngModel)]="complaintObj.complaintAgainst"
+                                        type="radio" name="complaintAgainst" id="agentBreaking" value="AgentBreaking">
+                                    <label class="form-check-label" for="agentBreaking">Agent Breaking</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" [(ngModel)]="complaintObj.complaintAgainst"
+                                        type="radio" name="complaintAgainst" id="other" value="Other">
+                                    <label class="form-check-label" for="other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-gorup">
+                                <label for="">First Name</label>
+                                <input [(ngModel)]="complaintObj.firstname" type="text" name="firstname" id="firstname"
+                                    class="form-control" placeholder="enter firstname">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-gorup">
+                                <label for="">last Name</label>
+                                <input [(ngModel)]="complaintObj.lastname" type="text" name="lastname" id="lastname"
+                                    class="form-control" placeholder="enter lastname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Address</label>
+                                <textarea [(ngModel)]="complaintObj.addressone" name="addressone" id="addressone"
+                                    cols="10" rows="2" class="form-control" placeholder="enter address"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Pincode</label>
+                                <input [(ngModel)]="complaintObj.pincode" type="number" name="pincode" id="pincode"
+                                    class="form-control" placeholder="enter pincode">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">City</label>
+                                <input [(ngModel)]="complaintObj.city" type="text" name="city" id="city"
+                                    class="form-control" placeholder="enter city">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Region</label>
+                                <input [(ngModel)]="complaintObj.region" type="text" name="region" id="region"
+                                    class="form-control" placeholder="enter region">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Phone</label>
+                                <input [(ngModel)]="complaintObj.phone" type="number" name="phone" id="phone"
+                                    class="form-control" placeholder="enter phone">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input [(ngModel)]="complaintObj.email" type="email" name="email" id="email"
+                                    class="form-control" placeholder="enter email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 mb-2">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="">Complaint</label>
+                                <textarea [(ngModel)]="complaintObj.complaint" name="complaint" id="" cols="" rows="2"
+                                    class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" (click)="onUpdate()">Update</button>
             </div>
         </div>
     </div>
