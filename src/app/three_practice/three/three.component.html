@@ -4,22 +4,22 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">First Name</label>
-                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.firstname" name="firstname" id="firstname"
-                    placeholder="enter first name" class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.firstname"
+                    name="firstname" id="firstname" placeholder="enter first name" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Middle Name</label>
-                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.middlename" name="middlename" id="middlename"
-                    placeholder="enter middle name" class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.middlename"
+                    name="middlename" id="middlename" placeholder="enter middle name" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Last Name</label>
-                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.lastname" name="lastname" id="lastname"
-                    placeholder="enter last name" class="form-control">
+                <input type="text" (ngModelChange)="createFullName()" [(ngModel)]="templateForm.lastname"
+                    name="lastname" id="lastname" placeholder="enter last name" class="form-control">
             </div>
         </div>
     </div>
@@ -35,16 +35,17 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Select DOB</label>
-                <input type="date" [(ngModel)]="templateForm.dob" name="dob" id="dob" class="form-control">
+                <input type="date" max="{{ getCurrentDate() }}" (change)="onDOBChange()" [(ngModel)]="templateForm.dob"
+                    name="dob" id="dob" class="form-control">
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="">Age</label>
-                <input type="text" [(ngModel)]="templateForm.age" name="age" id="age" class="form-control">
+                <input type="text" disabled [(ngModel)]="templateForm.age" name="age" id="age" class="form-control">
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" *ngIf="showLicence">
             <div class="form-group">
                 <label for="">Licence No</label>
                 <input type="text" [(ngModel)]="templateForm.licence" name="licence" id="licence" class="form-control">
@@ -150,13 +151,13 @@
     </div>
     <div class="container overflow-hidden text-center">
         <div class="row gx-5">
-          <div class="col">
-            <button class="btn btn-dark  btn-lg p-2 m-2">Reset</button>
-          </div>
-          <div class="col">
-            <button class="btn btn-secondary btn-lg p-2 m-2">Apply</button>
-          </div>
+            <div class="col">
+                <button class="btn btn-dark  btn-lg p-2 m-2">Reset</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-secondary btn-lg p-2 m-2">Apply</button>
+            </div>
         </div>
-      </div>
-    
+    </div>
+
 </div>
