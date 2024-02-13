@@ -31,7 +31,7 @@ export class ThreeComponent implements OnInit {
   }
 
   fillName: any;
-  showLicence:boolean=false;
+  showLicence: boolean = false;
   createFullName() {
     this.fillName = this.templateForm.firstname + ' ' + this.templateForm.middlename + ' ' + this.templateForm.lastname;
   }
@@ -55,11 +55,18 @@ export class ThreeComponent implements OnInit {
     console.log(selectedDateyear);
     console.log(currentYear);
     this.templateForm.age = currentYear - selectedDateyear;
-    if(this.templateForm.age >=18){
-      this.showLicence=true
+    if (this.templateForm.age >= 18) {
+      this.showLicence = true
     }
-
-
-
   }
+  onEndDateChange() {
+    const start = new Date(this.templateForm.startdate).getFullYear();
+    const end = new Date(this.templateForm.enddate).getFullYear();
+    const yeardiff = end - start;
+    if (yeardiff != 3) {
+      alert('u are not eligible for this course');
+      alert('u are not eligible for this course');
+    }
+  }
+
 }
