@@ -10,5 +10,10 @@
         <div class="col-md-3">
             <input type="file" name="" id="" (change)="onFileUpload($event)">
         </div>
+        <div class="col-md-3">
+            <div class="" *ngFor="let item of uploadedFilesNames">
+                <img [src]="fileUrl+item" alt="">
+            </div>
+        </div>
     </div>
 </div>
