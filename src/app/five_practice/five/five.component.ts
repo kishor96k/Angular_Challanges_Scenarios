@@ -12,14 +12,24 @@ export class FiveComponent implements OnInit {
   ) { }
 
   depturl: any = 'http://localhost:3000/departments';
+  userurl: any = 'http://localhost:3000/users';
 
   ngOnInit(): void {
     this.loadDepartmentData();
+    this.loadusersList();
   }
+
   departmantList: any;
+  usersList: any;
+
   loadDepartmentData() {
     this.http.get(this.depturl).subscribe((res: any) => {
       this.departmantList = res;
     });
+  }
+  loadusersList() {
+    this.http.get(this.userurl).subscribe((res: any) => {
+      this.usersList = res;
+    })
   }
 }

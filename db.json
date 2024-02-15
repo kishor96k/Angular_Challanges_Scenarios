@@ -2,18 +2,27 @@
   "users": [
     {
       "id": 1,
-      "name": "kishor",
-      "address": "Solapur"
+      "deptId": 3,
+      "firstname": "kishor",
+      "lastname": "chavan",
+      "email": "chavan@gmail.com",
+      "contact": 12345
     },
     {
       "id": 2,
-      "name": "darshan",
-      "address": "Solapur"
+      "deptId": 1,
+      "firstname": "darshan",
+      "lastname": "inde",
+      "email": "inde@gmail.com",
+      "contact": 87623
     },
     {
       "id": 3,
-      "name": "jagdish",
-      "address": "Solapur"
+      "deptId": 2,
+      "firstname": "jagdish",
+      "lastname": "patil",
+      "email": "patil@gmail.com",
+      "contact": 72341
     }
   ],
   "departments": [
