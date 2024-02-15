@@ -2,8 +2,18 @@
   "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "kishor",
+      "address": "Solapur"
+    },
+    {
+      "id": 2,
+      "name": "darshan",
+      "address": "Solapur"
+    },
+    {
+      "id": 3,
+      "name": "jagdish",
+      "address": "Solapur"
     }
   ]
   
