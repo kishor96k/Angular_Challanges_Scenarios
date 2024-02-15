@@ -1,5 +1,8 @@
-
 <div class="container mt-4 mb-4">
+    <button (click)="isView = !isView" class="btn btn-secondary btn-block">{{isView ?'Form':'List'}}</button>
+</div>
+
+<div class="container mt-4 mb-4" *ngIf="!isView">
     <h4 class="text-center mt-4 mb-4">***__List__***</h4>
     <div class="row">
         <table class="table table-bordered">
@@ -27,7 +30,7 @@
     </div>
 </div>
 
-<div class="container mt-4">
+<div class="container mt-4" *ngIf="isView">
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">

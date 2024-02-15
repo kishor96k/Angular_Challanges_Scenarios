@@ -21,6 +21,7 @@ export class FiveComponent implements OnInit {
 
   departmantList: any;
   usersList: any;
+  isView: boolean = true;
 
   loadDepartmentData() {
     this.http.get(this.depturl).subscribe((res: any) => {
