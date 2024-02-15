@@ -26,12 +26,12 @@ const routes: Routes = [
   {
     path: 'four',
     component: FourComponent,
-    title: 'crud with local storage'
+    title: 'file upload with validation'
   },
   {
     path: 'five',
     component: FiveComponent,
-    title: 'crud with local storage'
+    title: 'crud with Json File'
   },
 ];
 
