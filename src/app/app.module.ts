@@ -10,7 +10,6 @@ import { TwoComponent } from './two_practice/two/two.component';
 import { ThreeComponent } from './three_practice/three/three.component';
 import { FourComponent } from './four_practice/four/four.component';
 import { FiveComponent } from './five_practice/five/five.component';
-import { SixPracticeComponent } from './six-practice/six-practice.component';
 import { SixComponent } from './six_practice/six/six.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { SixComponent } from './six_practice/six/six.component';
     ThreeComponent,
     FourComponent,
     FiveComponent,
-    SixPracticeComponent,
     SixComponent
   ],
   imports: [

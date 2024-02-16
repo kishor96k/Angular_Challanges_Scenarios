@@ -5,6 +5,7 @@ import { OneComponent } from './one_practice/one/one.component';
 import { ThreeComponent } from './three_practice/three/three.component';
 import { FourComponent } from './four_practice/four/four.component';
 import { FiveComponent } from './five_practice/five/five.component';
+import { SixComponent } from './six_practice/six/six.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
     component: FiveComponent,
     title: 'crud with Json File'
   },
+  {
+    path:'six',
+    component:SixComponent,
+    title:'input or reusbale component'
+  }
 ];
 
 @NgModule({
