@@ -11,6 +11,7 @@ import { ThreeComponent } from './three_practice/three/three.component';
 import { FourComponent } from './four_practice/four/four.component';
 import { FiveComponent } from './five_practice/five/five.component';
 import { SixPracticeComponent } from './six-practice/six-practice.component';
+import { SixComponent } from './six_practice/six/six.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SixPracticeComponent } from './six-practice/six-practice.component';
     ThreeComponent,
     FourComponent,
     FiveComponent,
-    SixPracticeComponent
+    SixPracticeComponent,
+    SixComponent
   ],
   imports: [
     BrowserModule,
