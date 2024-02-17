@@ -23,7 +23,14 @@ export class SixComponent implements OnInit {
       this.usersList = res;
     })
   }
-
+  editUser(ev: any) {
+    this.getUsers();
+    alert("edited");
+   }
+  deleteUser(ev: any) {
+    this.getUsers();
+    alert("deleted");
+   }
 
 
 }
