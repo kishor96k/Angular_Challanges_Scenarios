@@ -13,6 +13,7 @@ import { FiveComponent } from './five_practice/five/five.component';
 import { SixComponent } from './six_practice/six/six.component';
 import { ReusableComponent } from './six_practice/reusable/reusable.component';
 import { SevenComponent } from './seven_practice/seven/seven.component';
+import { EightPracticeComponent } from './eight-practice/eight-practice.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SevenComponent } from './seven_practice/seven/seven.component';
     FiveComponent,
     SixComponent,
     ReusableComponent,
-    SevenComponent
+    SevenComponent,
+    EightPracticeComponent
   ],
   imports: [
     BrowserModule,
