@@ -7,13 +7,15 @@ import { FourComponent } from './four_practice/four/four.component';
 import { FiveComponent } from './five_practice/five/five.component';
 import { SixComponent } from './six_practice/six/six.component';
 import { SevenComponent } from './seven_practice/seven/seven.component';
+import { LoginComponent } from './seven_practice/seven/login/login.component';
+import { LayoutComponent } from './seven_practice/seven/layout/layout.component';
 
 
 const routes: Routes = [
   {
     path: 'one',
     component: OneComponent,
-    title:'inline editing'
+    title: 'inline editing'
   },
   {
     path: 'two',
@@ -36,15 +38,27 @@ const routes: Routes = [
     title: 'crud with Json File'
   },
   {
-    path:'six',
-    component:SixComponent,
-    title:'input or reusbale component'
+    path: 'six',
+    component: SixComponent,
+    title: 'input or reusbale component'
   },
   {
-    path:'seven',
-    component:SevenComponent,
-    title:'login app'
-  }
+    path: 'seven',
+    component: SevenComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+        data: { title: 'Login Page' }
+      },
+      {
+        path: 'layout',
+        component: LayoutComponent,
+        data: { title: 'Layout Page' }
+      },
+      // You can add more child routes if needed
+    ]
+  },
 ];
 
 @NgModule({
