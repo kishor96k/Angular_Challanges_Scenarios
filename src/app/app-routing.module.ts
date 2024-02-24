@@ -56,7 +56,7 @@ const routes: Routes = [
         component: LayoutComponent,
         data: { title: 'Layout Page' }
       },
-      // You can add more child routes if needed
+     
     ]
   },
 ];

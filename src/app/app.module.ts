@@ -30,7 +30,7 @@ import { LayoutComponent } from './seven_practice/seven/layout/layout.component'
     SevenComponent,
     EightPracticeComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
