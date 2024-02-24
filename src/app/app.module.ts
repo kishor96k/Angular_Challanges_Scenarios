@@ -14,6 +14,8 @@ import { SixComponent } from './six_practice/six/six.component';
 import { ReusableComponent } from './six_practice/reusable/reusable.component';
 import { SevenComponent } from './seven_practice/seven/seven.component';
 import { EightPracticeComponent } from './eight-practice/eight-practice.component';
+import { LoginComponent } from './seven_practice/seven/login/login.component';
+import { LayoutComponent } from './seven_practice/seven/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EightPracticeComponent } from './eight-practice/eight-practice.componen
     SixComponent,
     ReusableComponent,
     SevenComponent,
-    EightPracticeComponent
+    EightPracticeComponent,
+    LoginComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
