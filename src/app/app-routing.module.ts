@@ -6,6 +6,7 @@ import { ThreeComponent } from './three_practice/three/three.component';
 import { FourComponent } from './four_practice/four/four.component';
 import { FiveComponent } from './five_practice/five/five.component';
 import { SixComponent } from './six_practice/six/six.component';
+import { SevenComponent } from './seven_practice/seven/seven.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,11 @@ const routes: Routes = [
     path:'six',
     component:SixComponent,
     title:'input or reusbale component'
+  },
+  {
+    path:'seven',
+    component:SevenComponent,
+    title:'login app'
   }
 ];
 
