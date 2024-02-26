@@ -16,7 +16,6 @@ import { SevenComponent } from './seven_practice/seven/seven.component';
 import { EightPracticeComponent } from './eight-practice/eight-practice.component';
 import { LoginComponent } from './seven_practice/seven/login/login.component';
 import { LayoutComponent } from './seven_practice/seven/layout/layout.component';
-import { HomeComponent } from './movieseatbooking/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { HomeComponent } from './movieseatbooking/home/home.component';
     EightPracticeComponent,
     LoginComponent,
     LayoutComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
